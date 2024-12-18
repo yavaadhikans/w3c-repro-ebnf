@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="EN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Extensible Markup Language (XML) 1.0 (Fifth Edition)</title>
+  </head>
+  <body>
+    <div class="div1">
+      <h2><a name="sec-notation" id="sec-notation"/>6 Notation</h2>
+      <p>
+        The formal grammar of XML is given in this specification using a simple Extended Backus-Naur Form (EBNF) notation.
+        Each rule in the grammar defines one symbol, in the form
+      </p>
+      <div class="exampleInner">
+        <pre>symbol ::= expression</pre>
+      </div>
+      <p>
+        Symbols are written with an initial capital letter if they are the start symbol of a regular language, otherwise with an initial lowercase letter.
+        Literal strings are quoted.
+      </p>
+      <p>
+        Within the expression on the right-hand side of a rule, the following expressions are used to match strings of one or more characters:
+      </p>
+      <dl>
+        <dt class="label"><code>#xN</code></dt>
+        <dd>
+          <p>
+            where <code>N</code> is a hexadecimal integer, the expression matches the character whose number (code point) in ISO/IEC 10646 is <code>N</code>.
+            The number of leading zeros in the <code>#xN</code> form is insignificant.
+          </p>
+        </dd>
+        <dt class="label"><code>[a-zA-Z]</code>, <code>[#xN-#xN]</code></dt>
+        <dd>
+          <p>
+            matches any <a href="#NT-Char">Char</a> with a value in the range(s) indicated (inclusive).
+          </p>
+        </dd>
+        <dt class="label">
+							<code>[abc]</code>, <code>[#xN#xN#xN]</code>
+						</dt><dd><p>matches any <a href="#NT-Char">Char</a> with a value among the characters
+enumerated. Enumerations and ranges can be mixed in one set of brackets.</p></dd><dt class="label">
+							<code>[^a-z]</code>, <code>[^#xN-#xN]</code>
+						</dt><dd><p>matches any <a href="#NT-Char">Char</a> with a value <em>outside</em> the range
+indicated.</p></dd><dt class="label">
+							<code>[^abc]</code>, <code>[^#xN#xN#xN]</code>
+						</dt><dd><p>matches any <a href="#NT-Char">Char</a> with a value not among the characters given. Enumerations
+and ranges of forbidden values can be mixed in one set of brackets.</p></dd><dt class="label">
+							<code>"string"</code>
+						</dt><dd><p>matches a literal string <a title="match" href="#dt-match">matching</a> that
+given inside the double quotes.</p></dd><dt class="label">
+							<code>'string'</code>
+						</dt><dd><p>matches a literal string <a title="match" href="#dt-match">matching</a> that
+given inside the single quotes.</p></dd></dl><p> These symbols may be combined to match more complex patterns as follows,
+where <code>A</code> and <code>B</code> represent simple expressions: </p><dl><dt class="label">(<code>expression</code>)</dt><dd><p>
+								<code>expression</code> is treated as a unit and may be combined as described
+in this list.</p></dd><dt class="label">
+							<code>A?</code>
+						</dt><dd><p>matches <code>A</code> or nothing; optional <code>A</code>.</p></dd><dt class="label">
+							<code>A B</code>
+						</dt><dd><p>matches <code>A</code> followed by <code>B</code>. This
+operator has higher precedence than alternation; thus <code>A B | C D</code>
+is identical to <code>(A B) | (C D)</code>.</p></dd><dt class="label">
+							<code>A | B</code>
+						</dt><dd><p>matches <code>A</code> or <code>B</code>.</p></dd><dt class="label">
+							<code>A - B</code>
+						</dt><dd><p>matches any string that matches <code>A</code> but does not match <code>B</code>.</p></dd><dt class="label">
+							<code>A+</code>
+						</dt><dd><p>matches one or more occurrences of <code>A</code>. Concatenation
+has higher precedence than alternation; thus <code>A+ | B+</code> is identical
+to <code>(A+) | (B+)</code>.</p></dd><dt class="label">
+							<code>A*</code>
+						</dt><dd><p>matches zero or more occurrences of <code>A</code>. Concatenation
+has higher precedence than alternation; thus <code>A* | B*</code> is identical
+to <code>(A*) | (B*)</code>.</p></dd></dl><p> Other notations used in the productions are: </p><dl><dt class="label">
+							<code>/* ... */</code>
+						</dt><dd><p>comment.</p></dd><dt class="label">
+							<code>[ wfc: ... ]</code>
+						</dt><dd><p>well-formedness constraint; this identifies by name a constraint on <a title="Well-Formed" href="#dt-wellformed">well-formed</a> documents associated with a production.</p></dd><dt class="label">
+							<code>[ vc: ... ]</code>
+						</dt><dd><p>validity constraint; this identifies by name a constraint on <a title="Validity" href="#dt-valid">valid</a>
+documents associated with a production.</p></dd></dl><p>
+			</p>
+    </div>
+  </body>
+</html>
