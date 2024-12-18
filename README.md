@@ -4,4 +4,4 @@ This repository includes a partial reproduction (for personal usage) of W3C's [*
 
 W3C's Document license instructs me to notify that:
 
-_"Copyright © 2023 W3C®. This software or document includes material copied from or derived from [**Extensible Markup Language (XML) 1.0 (Fifth Edition)** Recommendation](https://www.w3.org/TR/xml/#sec-notation)."_
+_"Copyright © 2023 W3C®. This software or document includes material copied from or derived from [**Extensible Markup Language (XML) 1.0 (Fifth Edition)** Recommendation](https://www.w3.org/TR/xml/)."_
