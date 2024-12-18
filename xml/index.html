@@ -36,12 +36,17 @@
             matches any <a href="#NT-Char">Char</a> with a value in the range(s) indicated (inclusive).
           </p>
         </dd>
-        <dt class="label">
-							<code>[abc]</code>, <code>[#xN#xN#xN]</code>
-						</dt><dd><p>matches any <a href="#NT-Char">Char</a> with a value among the characters
-enumerated. Enumerations and ranges can be mixed in one set of brackets.</p></dd><dt class="label">
-							<code>[^a-z]</code>, <code>[^#xN-#xN]</code>
-						</dt><dd><p>matches any <a href="#NT-Char">Char</a> with a value <em>outside</em> the range
+        <dt class="label"><code>[abc]</code>, <code>[#xN#xN#xN]</code></dt>
+				<dd>
+					<p>
+						matches any <a href="#NT-Char">Char</a> with a value among the characters enumerated.
+						Enumerations and ranges can be mixed in one set of brackets.
+					</p>
+				</dd>
+				<dt class="label"><code>[^a-z]</code>, <code>[^#xN-#xN]</code></dt>
+				<dd>
+					<p>
+						matches any <a href="#NT-Char">Char</a> with a value <em>outside</em> the range
 indicated.</p></dd><dt class="label">
 							<code>[^abc]</code>, <code>[^#xN#xN#xN]</code>
 						</dt><dd><p>matches any <a href="#NT-Char">Char</a> with a value not among the characters given. Enumerations
