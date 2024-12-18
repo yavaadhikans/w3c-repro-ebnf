@@ -1,6 +1,6 @@
 # w3c-repro-ebnf
 
-This repository includes a partial reproduction (for personal usage) of W3C's [**Extensible Markup Language (XML) 1.0 (Fifth Edition) Recommendation Notation section**](https://www.w3.org/TR/xml/#sec-notation).
+This repository includes a partial reproduction (for personal usage) of W3C's [**XML 1.0 (Fifth Edition) Recommendation Notation section**](https://www.w3.org/TR/xml/#sec-notation).
 
 W3C's Document license instructs me to notify that:
 
